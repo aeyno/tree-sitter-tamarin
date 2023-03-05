@@ -1,0 +1,38 @@
+==================
+Equation declaration
+==================
+
+
+theory EquationDeclaration
+begin
+
+equations: 	id(a)=a
+
+end
+
+---
+
+(source_file
+  (security_protocol_theory
+    (ident)
+		(body
+          (equations
+            (equation
+              (term
+                (app
+                  (ident)
+                  (msetterm
+                    (xorterm
+                      (multterm
+                        (expterm
+                          (term
+                            (literal
+                              (nonnode_var
+                                (msg_var
+                                  (ident)))))))))))
+              (term
+                (literal
+                  (nonnode_var
+                    (msg_var
+                  (ident))))))))
+      ))

@@ -1,0 +1,25 @@
+==================
+Function declaration
+==================
+
+
+theory EmptyTheory
+begin
+
+functions: myfunction/0, myotherfunction/3
+
+end
+
+---
+
+(source_file
+  (security_protocol_theory
+    (ident)
+		(body
+          (functions
+            (function_sym
+              (ident)
+              (arity))
+            (function_sym
+              (ident)
+              (arity))))))

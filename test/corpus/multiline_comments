@@ -1,0 +1,42 @@
+==================
+Multiline comment
+==================
+
+/* This is a multiline command on one line */
+
+/*
+	This is a multiline command on multiple
+	lines
+*/
+
+theory EmptyTheory
+begin
+
+/* This is a multiline command on one line */
+
+/*
+	This is a multiline command on multiple
+	lines
+*/
+
+end
+
+/* This is a multiline command on one line */
+
+/*
+	This is a multiline command on multiple
+	lines
+*/
+
+---
+
+(source_file
+  (comment)
+  (comment)
+  (security_protocol_theory
+    (ident)
+	(comment)
+	(comment))
+	(comment)
+	(comment)
+	)

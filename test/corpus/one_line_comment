@@ -1,0 +1,23 @@
+==================
+One line comment
+==================
+
+// This is a one line command
+
+theory EmptyTheory
+begin
+
+// This is a one line command
+
+end
+
+// This is a one line command
+
+---
+
+(source_file
+  (comment)
+  (security_protocol_theory
+    (ident)
+	  (comment))
+	(comment))

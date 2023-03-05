@@ -1,0 +1,38 @@
+==================
+More complex equation declaration
+==================
+
+
+theory ComplexEquationDeclaration
+begin
+
+equations: 	id(a)=a,
+			aeaddec(aeadenc(m, k, n, a), k, n, a) = m 
+
+end
+
+---
+
+(source_file
+  (security_protocol_theory
+    (ident)
+		(body
+          (equations
+            (equation
+              (term
+                (app
+                  (ident)
+                  (msetterm
+                    (xorterm
+                      (multterm
+                        (expterm
+                          (term
+                            (literal
+                              (nonnode_var
+                                (msg_var
+                                  (ident)))))))))))
+              (term
+                (literal
+                  (nonnode_var
+                    (msg_var
+                      (ident))))))))

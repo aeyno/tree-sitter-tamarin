@@ -1,0 +1,23 @@
+==================
+Import builtins
+==================
+
+
+theory EmptyTheory
+begin
+
+builtins: symmetric-encryption, hashing, signing
+
+end
+
+---
+
+(source_file
+  (security_protocol_theory
+    (ident)
+		(body
+          (built_ins
+            (built_in)
+            (built_in)
+            (built_in)
+            ))))

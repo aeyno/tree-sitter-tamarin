@@ -1,0 +1,15 @@
+==================
+Empty theory
+==================
+
+theory EmptyTheory
+begin
+
+end
+
+---
+
+(source_file
+  (security_protocol_theory
+    (ident)))
+
