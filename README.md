@@ -1,5 +1,7 @@
 # Tree-sitter grammar for Tamarin
 
+![build](https://github.com/aeyno/tree-sitter-tamarin/actions/workflows/ci.yml/badge.svg)
+
 Tree-sitter grammar for the [Tamarin](tamarin-prover.github.io/) prover theory files syntax highlighting.
 
 Tree-sitter grammar are compatible with several editors including [Neovim](https://neovim.io/), [Helix](https://helix-editor.com/) and in a [near future](https://lists.gnu.org/archive/html/emacs-devel/2022-11/msg01443.html) [Emacs](https://www.gnu.org/software/emacs/).
