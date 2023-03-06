@@ -1,0 +1,68 @@
+
+==================
+Simple rule with action facts and indentation
+==================
+
+
+theory ComplexEquationDeclaration
+begin
+
+rule MyRule:
+let y = func(x)
+in
+	[
+		A(x)
+	]
+	--[
+		MyAction(x)
+	]->
+	[
+		B(y)
+	]
+
+end
+
+---
+
+(source_file
+  (security_protocol_theory
+    (ident)
+      (body
+        (rule
+          (simple_rule
+              (ident)
+              (let_block
+                (msg_var
+                  (ident))
+                (term
+                  (app
+                    (ident)
+                    (term
+                      (literal
+                        (nonnode_var
+                          (msg_var
+                            (ident))))))))
+              (facts
+                (fact
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))))
+              (facts
+                (fact
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))))
+              (facts
+                (fact
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident))))))))))))

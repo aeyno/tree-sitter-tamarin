@@ -16,21 +16,17 @@ end
 (source_file
   (security_protocol_theory
     (ident)
-		(body
+        (body
           (equations
             (equation
               (term
                 (app
                   (ident)
-                  (msetterm
-                    (xorterm
-                      (multterm
-                        (expterm
-                          (term
-                            (literal
-                              (nonnode_var
-                                (msg_var
-                                  (ident)))))))))))
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))))
               (term
                 (literal
                   (nonnode_var
@@ -40,79 +36,46 @@ end
               (term
                 (app
                   (ident)
-                  (msetterm
-                    (xorterm
-                      (multterm
-                        (expterm
-                          (term
-                            (app
-                              (ident)
-                              (msetterm
-                                (xorterm
-                                  (multterm
-                                    (expterm
-                                      (term
-                                        (literal
-                                          (nonnode_var
-                                            (msg_var
-                                              (ident)))))))))
-                              (msetterm
-                                (xorterm
-                                  (multterm
-                                    (expterm
-                                      (term
-                                        (literal
-                                          (nonnode_var
-                                            (msg_var
-                                              (ident)))))))))
-                              (msetterm
-                                (xorterm
-                                  (multterm
-                                    (expterm
-                                      (term
-                                        (literal
-                                          (nonnode_var
-                                            (msg_var
-                                              (ident)))))))))
-                              (msetterm
-                                (xorterm
-                                  (multterm
-                                    (expterm
-                                      (term
-                                        (literal
-                                          (nonnode_var
-                                            (msg_var
-                                              (ident)))))))))))))))
-                  (msetterm
-                    (xorterm
-                      (multterm
-                        (expterm
-                          (term
-                            (literal
-                              (nonnode_var
-                                (msg_var
-                                  (ident)))))))))
-                  (msetterm
-                    (xorterm
-                      (multterm
-                        (expterm
-                          (term
-                            (literal
-                              (nonnode_var
-                                (msg_var
-                                  (ident)))))))))
-                  (msetterm
-                    (xorterm
-                      (multterm
-                        (expterm
-                          (term
-                            (literal
-                              (nonnode_var
-                                (msg_var
-                                  (ident)))))))))))
+                  (term
+                    (app
+                      (ident)
+                      (term
+                        (literal
+                          (nonnode_var
+                            (msg_var
+                              (ident)))))
+                      (term
+                        (literal
+                          (nonnode_var
+                            (msg_var
+                              (ident)))))
+                      (term
+                        (literal
+                          (nonnode_var
+                            (msg_var
+                              (ident)))))
+                      (term
+                        (literal
+                          (nonnode_var
+                            (msg_var
+                              (ident)))))))
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))))
               (term
                 (literal
                   (nonnode_var
                     (msg_var
                       (ident))))))))))
-

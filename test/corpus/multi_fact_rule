@@ -1,0 +1,81 @@
+==================
+Rules with multiple facts
+==================
+
+
+theory ComplexEquationDeclaration
+begin
+
+rule MyRule:
+	[
+		A(x), B(x), C(y,z)
+	]
+	-->
+	[
+		D(x,y,z), E(z)
+	]
+
+end
+
+---
+
+(source_file
+      (security_protocol_theory
+        (ident)
+        (body
+          (rule
+            (simple_rule
+              (ident)
+              (facts
+                (fact
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident))))))
+                (fact
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident))))))
+                (fact
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))))
+              (facts
+                (fact
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident))))))
+                (fact
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident))))))))))))
+

@@ -615,7 +615,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "msetterm"
+                "name": "_msetterm"
               }
             ]
           }
@@ -1376,7 +1376,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "msetterm"
+          "name": "_msetterm"
         },
         {
           "type": "REPEAT",
@@ -1389,7 +1389,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "msetterm"
+                "name": "_msetterm"
               }
             ]
           }
@@ -1400,12 +1400,12 @@
         }
       ]
     },
-    "msetterm": {
+    "_msetterm": {
       "type": "SEQ",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "xorterm"
+          "name": "_xorterm"
         },
         {
           "type": "REPEAT",
@@ -1418,19 +1418,19 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "xorterm"
+                "name": "_xorterm"
               }
             ]
           }
         }
       ]
     },
-    "xorterm": {
+    "_xorterm": {
       "type": "SEQ",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "multterm"
+          "name": "_multterm"
         },
         {
           "type": "REPEAT",
@@ -1452,19 +1452,19 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "multterm"
+                "name": "_multterm"
               }
             ]
           }
         }
       ]
     },
-    "multterm": {
+    "_multterm": {
       "type": "SEQ",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "expterm"
+          "name": "_expterm"
         },
         {
           "type": "REPEAT",
@@ -1477,14 +1477,14 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "expterm"
+                "name": "_expterm"
               }
             ]
           }
         }
       ]
     },
-    "expterm": {
+    "_expterm": {
       "type": "SEQ",
       "members": [
         {
@@ -1539,7 +1539,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "msetterm"
+          "name": "_msetterm"
         },
         {
           "type": "STRING",
@@ -1563,7 +1563,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "msetterm"
+            "name": "_msetterm"
           },
           {
             "type": "REPEAT",
@@ -1576,7 +1576,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "msetterm"
+                  "name": "_msetterm"
                 }
               ]
             }
@@ -1860,7 +1860,7 @@
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "msetterm"
+                  "name": "_msetterm"
                 },
                 {
                   "type": "REPEAT",
@@ -1873,7 +1873,7 @@
                       },
                       {
                         "type": "SYMBOL",
-                        "name": "msetterm"
+                        "name": "_msetterm"
                       }
                     ]
                   }
@@ -2241,7 +2241,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "msetterm"
+              "name": "_msetterm"
             },
             {
               "type": "STRING",
@@ -2249,7 +2249,7 @@
             },
             {
               "type": "SYMBOL",
-              "name": "msetterm"
+              "name": "_msetterm"
             }
           ]
         },

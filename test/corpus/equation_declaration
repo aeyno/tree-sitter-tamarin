@@ -21,15 +21,11 @@ end
               (term
                 (app
                   (ident)
-                  (msetterm
-                    (xorterm
-                      (multterm
-                        (expterm
                           (term
                             (literal
                               (nonnode_var
                                 (msg_var
-                                  (ident)))))))))))
+                                  (ident)))))))
               (term
                 (literal
                   (nonnode_var
