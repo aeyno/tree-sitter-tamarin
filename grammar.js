@@ -13,7 +13,11 @@ const BUILT_INS = [
 module.exports = grammar({
   name: 'tamarin',
 
-  extras: $ => [/\s|\\\r?\n/, $.comment],
+  extras: $ => [/\s|\\\r?\n/, $.multiline_comment, $.comment],
+
+  externals: $ => [
+    $.multiline_comment
+  ],
 
   rules: {
     source_file: $ => $.security_protocol_theory,
@@ -543,7 +547,6 @@ module.exports = grammar({
     formal_comment: $ => seq(
       $.ident,
       '{*',
-      ///[^*]*\*+([^{*][^*]*\*+)*/,
       /[^\*]*/,
       /*repeat(
         $.ident
@@ -878,14 +881,9 @@ module.exports = grammar({
     hexcolor: $ => /#[0-9a-f]{6}/,
 
 
-    comment: $ => token(choice(
-      seq('//', /(\\(.|\r?\n)|[^\\\n])*/),
-      seq(
-        '/*',
-        /[^*]*\*+([^/*][^*]*\*+)*/,
-        '/'
-      )
-    )),
+    comment: $ => token(
+      seq('//', /(\\(.|\r?\n)|[^\\\n])*/)
+    ),
 
   }
 });

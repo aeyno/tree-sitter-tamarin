@@ -2770,37 +2770,15 @@
     "comment": {
       "type": "TOKEN",
       "content": {
-        "type": "CHOICE",
+        "type": "SEQ",
         "members": [
           {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "//"
-              },
-              {
-                "type": "PATTERN",
-                "value": "(\\\\(.|\\r?\\n)|[^\\\\\\n])*"
-              }
-            ]
+            "type": "STRING",
+            "value": "//"
           },
           {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "/*"
-              },
-              {
-                "type": "PATTERN",
-                "value": "[^*]*\\*+([^/*][^*]*\\*+)*"
-              },
-              {
-                "type": "STRING",
-                "value": "/"
-              }
-            ]
+            "type": "PATTERN",
+            "value": "(\\\\(.|\\r?\\n)|[^\\\\\\n])*"
           }
         ]
       }
@@ -2813,12 +2791,21 @@
     },
     {
       "type": "SYMBOL",
+      "name": "multiline_comment"
+    },
+    {
+      "type": "SYMBOL",
       "name": "comment"
     }
   ],
   "conflicts": [],
   "precedences": [],
-  "externals": [],
+  "externals": [
+    {
+      "type": "SYMBOL",
+      "name": "multiline_comment"
+    }
+  ],
   "inline": [],
   "supertypes": []
 }

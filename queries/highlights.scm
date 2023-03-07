@@ -41,7 +41,7 @@
 ;(ident) @type
 (natural) @number
 (hexcolor) @number
-(comment) @comment
+[(comment) (multiline_comment)] @comment
 (formal_comment (ident) @type) @comment
 
 (simple_rule (ident) @type)

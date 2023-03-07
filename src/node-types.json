@@ -1349,6 +1349,10 @@
     "named": false
   },
   {
+    "type": "multiline_comment",
+    "named": true
+  },
+  {
     "type": "multiset",
     "named": false
   },
