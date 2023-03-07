@@ -47,7 +47,7 @@ bool tree_sitter_tamarin_external_scanner_scan(void *payload, TSLexer *lexer,
                                                const bool *whitelist) {
   if (whitelist[MULTILINE_COMMENT]) {
     while (lexer->lookahead == ' ' || lexer->lookahead == '\t' ||
-           lexer->lookahead == '\n') {
+           lexer->lookahead == '\n' || lexer->lookahead == '\r') {
       lexer->advance(lexer, true);
     }
 
@@ -75,13 +75,13 @@ bool tree_sitter_tamarin_external_scanner_scan(void *payload, TSLexer *lexer,
       case '*':
         do {
           lexer->advance(lexer, false);
-        } while(lexer->lookahead == '*');
+        } while (lexer->lookahead == '*');
         if (lexer->lookahead == '/')
           depth--;
         break;
       }
 
-      if(lexer->eof(lexer)) {
+      if (lexer->eof(lexer)) {
         lexer->result_symbol = MULTILINE_COMMENT;
         return true;
       }
