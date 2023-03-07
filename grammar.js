@@ -36,7 +36,7 @@ module.exports = grammar({
         $.restriction,
         $.lemma,
         $.formal_comment,
-        ///\s|\\\r?\n/
+        $.tactic
       )
     ),
 
@@ -115,8 +115,139 @@ module.exports = grammar({
       repeat1($.goal_ranking)
     ),
 
-    goal_ranking: $ => 'TODO',
+    goal_ranking: $ => choice(
+      $.standard_goal_ranking,
+      $.oracle_goal_ranking
+    ),
 
+
+    standard_goal_ranking: $ => choice(
+      'C',
+      'I',
+      'P',
+      'S',
+      'c',
+      'i',
+      'p',
+      's'
+    ),
+
+    oracle_goal_ranking: $ => choice(
+      seq(
+        'o',
+        '"',
+        /[^"]*/,
+        '"'
+      ),
+      seq(
+        'O',
+        '"',
+        /[^"]*/,
+        '"'
+      )
+    ),
+
+    tactic: $ => seq(
+      'tactic',
+      ':',
+      $.ident,
+      optional($.presort),
+      choice(
+        seq(
+          repeat1($.prio),
+          repeat($.deprio)
+        ),
+        seq(
+          repeat($.prio),
+          repeat1($.deprio)
+        )
+      )
+    ),
+
+    presort: $ => seq(
+      'presort',
+      ':',
+      $.standard_goal_ranking
+    ),
+
+    prio: $ => seq(
+      'prio',
+      ':',
+      optional(
+        seq(
+          '{',
+          $.post_ranking,
+          '}'
+        )
+      ),
+      repeat1($.function)
+    ),
+
+    deprio: $ => seq(
+      'deprio',
+      ':',
+      optional(
+        seq(
+          '{',
+          $.post_ranking,
+          '}'
+        )
+      ),
+      repeat1($.function)
+    ),
+
+    post_ranking: $ => choice(
+      'smallest',
+      'id'
+    ),
+
+    function: $ => seq(
+      $.and_function,
+      repeat(
+        seq(
+          '|',
+          optional(
+            $.and_function
+          )
+        )
+      )
+    ),
+
+    and_function: $ => seq(
+      $.not_function,
+      repeat(
+        seq(
+          '&',
+          optional(
+            $.not_function
+          )
+        )
+      )
+    ),
+
+    not_function: $ => seq(
+      optional('not'),
+      $.function_name,
+      repeat(
+        seq(
+          '"',
+          $.param,
+          '"'
+        )
+      )
+    ),
+
+    param: $ => /[^"]*/,
+
+    function_name: $ => choice(
+      'regex',
+      'isFactName',
+      'isInFactTerms',
+      'dhreNoise',
+      'defaultNoise',
+      'reasonableNoncesNoise',
+      'nonAbsurdGoal'
+    ),
 
     rule: $ => seq(
       $.simple_rule,

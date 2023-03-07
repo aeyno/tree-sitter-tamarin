@@ -1,14 +1,35 @@
-"rule" @keyword
-"let" @keyword
-"in" @keyword
-"theory" @keyword
-"begin" @keyword
-"end" @keyword
-"functions" @keyword
-"builtins" @keyword
-"restriction" @keyword
-"equations" @keyword
-"lemma" @keyword
+[
+  "rule"
+  "let"
+  "in"
+  "theory"
+  "begin"
+  "end"
+  "functions"
+  "builtins"
+  "restriction"
+  "equations"
+  "lemma"
+  "tactic"
+  "presort"
+  "prio"
+  "deprio"
+] @keyword
+
+(security_protocol_theory (ident) @type)
+
+(function_name) @type.builtin
+
+(not_function ["\"" (param)] @string)
+(tactic (ident) @type)
+[
+  (standard_goal_ranking)
+  (oracle_goal_ranking)
+  (function_name)
+  (post_ranking)
+] @constant
+
+(not_function "not" @operator)
 
 ;"In" @type.builtin
 ;"Out" @type.builtin
@@ -19,6 +40,7 @@
 
 ;(ident) @type
 (natural) @number
+(hexcolor) @number
 (comment) @comment
 (formal_comment (ident) @type) @comment
 
@@ -29,10 +51,9 @@
 
 (quantifier) @operator
 [ "*" "+" "-" "=" "~" "!" "==>" "<=>" "#" "@" "&"] @operator
+(literal [ "'" (ident)] @string) 
 
 (function_sym (ident)@function.builtin (arity) @number)
 
 (app (ident) @function.builtin)
 (fact (ident) @function)
-; (function_declaration name: (identifier) @function)
-

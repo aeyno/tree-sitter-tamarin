@@ -1,5 +1,20 @@
 [
   {
+    "type": "and_function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "not_function",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "app",
     "named": true,
     "fields": {},
@@ -97,6 +112,10 @@
         {
           "type": "rule",
           "named": true
+        },
+        {
+          "type": "tactic",
+          "named": true
         }
       ]
     }
@@ -131,6 +150,25 @@
       "types": [
         {
           "type": "negation",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "deprio",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "function",
+          "named": true
+        },
+        {
+          "type": "post_ranking",
           "named": true
         }
       ]
@@ -270,6 +308,26 @@
     }
   },
   {
+    "type": "function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "and_function",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_name",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "function_sym",
     "named": true,
     "fields": {},
@@ -344,6 +402,25 @@
         },
         {
           "type": "node_var",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "goal_ranking",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "oracle_goal_ranking",
+          "named": true
+        },
+        {
+          "type": "standard_goal_ranking",
           "named": true
         }
       ]
@@ -601,6 +678,74 @@
     }
   },
   {
+    "type": "not_function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "param",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "oracle_goal_ranking",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "param",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "post_ranking",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "presort",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "standard_goal_ranking",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "prio",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "function",
+          "named": true
+        },
+        {
+          "type": "post_ranking",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "proof_method",
     "named": true,
     "fields": {},
@@ -786,6 +931,38 @@
     }
   },
   {
+    "type": "standard_goal_ranking",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "tactic",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "deprio",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "presort",
+          "named": true
+        },
+        {
+          "type": "prio",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "term",
     "named": true,
     "fields": {},
@@ -952,6 +1129,10 @@
     "named": false
   },
   {
+    "type": "C",
+    "named": false
+  },
+  {
     "type": "E",
     "named": false
   },
@@ -961,6 +1142,22 @@
   },
   {
     "type": "F",
+    "named": false
+  },
+  {
+    "type": "I",
+    "named": false
+  },
+  {
+    "type": "O",
+    "named": false
+  },
+  {
+    "type": "P",
+    "named": false
+  },
+  {
+    "type": "S",
     "named": false
   },
   {
@@ -1020,6 +1217,10 @@
     "named": false
   },
   {
+    "type": "c",
+    "named": false
+  },
+  {
     "type": "case",
     "named": false
   },
@@ -1037,6 +1238,18 @@
   },
   {
     "type": "contradiction",
+    "named": false
+  },
+  {
+    "type": "defaultNoise",
+    "named": false
+  },
+  {
+    "type": "deprio",
+    "named": false
+  },
+  {
+    "type": "dhreNoise",
     "named": false
   },
   {
@@ -1064,10 +1277,6 @@
     "named": false
   },
   {
-    "type": "goal_ranking",
-    "named": true
-  },
-  {
     "type": "hashing",
     "named": false
   },
@@ -1088,6 +1297,14 @@
     "named": false
   },
   {
+    "type": "i",
+    "named": false
+  },
+  {
+    "type": "id",
+    "named": false
+  },
+  {
     "type": "ident",
     "named": true
   },
@@ -1097,6 +1314,14 @@
   },
   {
     "type": "induction",
+    "named": false
+  },
+  {
+    "type": "isFactName",
+    "named": false
+  },
+  {
+    "type": "isInFactTerms",
     "named": false
   },
   {
@@ -1140,7 +1365,27 @@
     "named": false
   },
   {
+    "type": "nonAbsurdGoal",
+    "named": false
+  },
+  {
     "type": "not",
+    "named": false
+  },
+  {
+    "type": "o",
+    "named": false
+  },
+  {
+    "type": "p",
+    "named": false
+  },
+  {
+    "type": "presort",
+    "named": false
+  },
+  {
+    "type": "prio",
     "named": false
   },
   {
@@ -1149,6 +1394,14 @@
   },
   {
     "type": "qed",
+    "named": false
+  },
+  {
+    "type": "reasonableNoncesNoise",
+    "named": false
+  },
+  {
+    "type": "regex",
     "named": false
   },
   {
@@ -1172,11 +1425,19 @@
     "named": false
   },
   {
+    "type": "s",
+    "named": false
+  },
+  {
     "type": "signing",
     "named": false
   },
   {
     "type": "simplify",
+    "named": false
+  },
+  {
+    "type": "smallest",
     "named": false
   },
   {
@@ -1200,6 +1461,10 @@
     "named": false
   },
   {
+    "type": "tactic",
+    "named": false
+  },
+  {
     "type": "theory",
     "named": false
   },
@@ -1216,11 +1481,19 @@
     "named": false
   },
   {
+    "type": "{",
+    "named": false
+  },
+  {
     "type": "{*",
     "named": false
   },
   {
     "type": "|",
+    "named": false
+  },
+  {
+    "type": "}",
     "named": false
   },
   {
