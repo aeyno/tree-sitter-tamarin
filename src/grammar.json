@@ -40,7 +40,7 @@
     },
     "ident": {
       "type": "PATTERN",
-      "value": "[a-zA-Z]\\w*?"
+      "value": "[a-zA-Z0-9]\\w*?"
     },
     "body": {
       "type": "REPEAT1",
@@ -853,8 +853,16 @@
           "value": "["
         },
         {
-          "type": "SYMBOL",
-          "name": "facts"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "facts"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -875,8 +883,16 @@
                   "value": "--["
                 },
                 {
-                  "type": "SYMBOL",
-                  "name": "facts"
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "facts"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
                 },
                 {
                   "type": "STRING",
@@ -891,8 +907,16 @@
           "value": "["
         },
         {
-          "type": "SYMBOL",
-          "name": "facts"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "facts"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",

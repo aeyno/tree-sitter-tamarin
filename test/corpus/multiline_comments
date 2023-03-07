@@ -31,12 +31,12 @@ end
 ---
 
 (source_file
-  (comment)
-  (comment)
+  (multiline_comment)
+  (multiline_comment)
   (security_protocol_theory
     (ident)
-	(comment)
-	(comment))
-	(comment)
-	(comment)
+	(multiline_comment)
+	(multiline_comment))
+	(multiline_comment)
+	(multiline_comment)
 	)

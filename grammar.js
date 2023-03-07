@@ -30,7 +30,7 @@ module.exports = grammar({
       'end'
     ),
 
-    ident: $ => /[a-zA-Z]\w*?/,
+    ident: $ => /[a-zA-Z0-9]\w*?/,
 
     body: $ => repeat1(
       choice(
@@ -278,18 +278,18 @@ module.exports = grammar({
       ':',
       optional($.let_block),
       '[',
-      $.facts,
+      optional($.facts),
       ']',
       choice(
         '-->',
         seq(
           '--[',
-          $.facts,
+          optional($.facts),
           ']->'
         )
       ),
       '[',
-      $.facts,
+      optional($.facts),
       ']'
     ),
 
