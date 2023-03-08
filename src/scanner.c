@@ -68,7 +68,9 @@ bool tree_sitter_tamarin_external_scanner_scan(void *payload, TSLexer *lexer,
 
       switch (lexer->lookahead) {
       case '/':
-        lexer->advance(lexer, false);
+        do {
+          lexer->advance(lexer, false);
+        } while (lexer->lookahead == '/');
         if (lexer->lookahead == '*')
           depth++;
         break;
