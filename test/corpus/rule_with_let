@@ -1,10 +1,9 @@
-
 ==================
-Simple rule with action facts and indentation
+Rule with let statement
 ==================
 
 
-theory ComplexEquationDeclaration
+theory RuleWithLet
 begin
 
 rule MyRule:
@@ -37,6 +36,103 @@ end
                 (term
                   (app
                     (ident)
+                    (term
+                      (literal
+                        (nonnode_var
+                          (msg_var
+                            (ident))))))))
+              (facts
+                (fact
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))))
+              (facts
+                (fact
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))))
+              (facts
+                (fact
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident))))))))))))
+
+==================
+Rule with multiple let statements
+==================
+
+
+theory RuleWithLet
+begin
+
+rule MyRule:
+let y = func(x)
+    z = something(y)
+    z = <'aa', x, y>
+in
+	[
+		A(x)
+	]
+	--[
+		MyAction(x)
+	]->
+	[
+		B(y)
+	]
+
+end
+
+---
+
+(source_file
+  (security_protocol_theory
+    (ident)
+      (body
+        (rule
+          (simple_rule
+              (ident)
+              (let_block
+                (msg_var
+                  (ident))
+                (term
+                  (app
+                    (ident)
+                    (term
+                      (literal
+                        (nonnode_var
+                          (msg_var
+                            (ident)))))))
+                (msg_var
+                  (ident))
+                (term
+                  (app
+                    (ident)
+                    (term
+                      (literal
+                        (nonnode_var
+                          (msg_var
+                            (ident)))))))
+                (msg_var
+                  (ident))
+                (term
+                  (tuple_term
+                    (term
+                      (literal
+                        (ident)))
+                    (term
+                      (literal
+                        (nonnode_var
+                          (msg_var
+                            (ident)))))
                     (term
                       (literal
                         (nonnode_var
