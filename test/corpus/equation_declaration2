@@ -1,6 +1,6 @@
-==================
+================================================================================
 More complex equation declaration
-==================
+================================================================================
 
 
 theory ComplexEquationDeclaration
@@ -11,14 +11,31 @@ equations: 	id(a)=a,
 
 end
 
----
+--------------------------------------------------------------------------------
 
 (source_file
   (security_protocol_theory
     (ident)
-        (body
-          (equations
-            (equation
+    (body
+      (equations
+        (equation
+          (term
+            (app
+              (ident)
+              (term
+                (literal
+                  (nonnode_var
+                    (msg_var
+                      (ident)))))))
+          (term
+            (literal
+              (nonnode_var
+                (msg_var
+                  (ident))))))
+        (equation
+          (term
+            (app
+              (ident)
               (term
                 (app
                   (ident)
@@ -26,39 +43,7 @@ end
                     (literal
                       (nonnode_var
                         (msg_var
-                          (ident)))))))
-              (term
-                (literal
-                  (nonnode_var
-                    (msg_var
-                      (ident))))))
-            (equation
-              (term
-                (app
-                  (ident)
-                  (term
-                    (app
-                      (ident)
-                      (term
-                        (literal
-                          (nonnode_var
-                            (msg_var
-                              (ident)))))
-                      (term
-                        (literal
-                          (nonnode_var
-                            (msg_var
-                              (ident)))))
-                      (term
-                        (literal
-                          (nonnode_var
-                            (msg_var
-                              (ident)))))
-                      (term
-                        (literal
-                          (nonnode_var
-                            (msg_var
-                              (ident)))))))
+                          (ident)))))
                   (term
                     (literal
                       (nonnode_var
@@ -78,4 +63,101 @@ end
                 (literal
                   (nonnode_var
                     (msg_var
-                      (ident))))))))))
+                      (ident)))))
+              (term
+                (literal
+                  (nonnode_var
+                    (msg_var
+                      (ident)))))
+              (term
+                (literal
+                  (nonnode_var
+                    (msg_var
+                      (ident)))))))
+          (term
+            (literal
+              (nonnode_var
+                (msg_var
+                  (ident))))))))))
+
+================================================================================
+Equation declaration with functions on the right hand side
+================================================================================
+
+
+theory ComplexEquationDeclaration
+begin
+
+equations: 	a = id(a),
+			m = aeaddec(aeadenc(m, k, n, a), k, n, a) 
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (equations
+        (equation
+          (term
+            (literal
+              (nonnode_var
+                (msg_var
+                  (ident)))))
+          (term
+            (app
+              (ident)
+              (term
+                (literal
+                  (nonnode_var
+                    (msg_var
+                      (ident))))))))
+        (equation
+          (term
+            (literal
+              (nonnode_var
+                (msg_var
+                  (ident)))))
+          (term
+            (app
+              (ident)
+              (term
+                (app
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))))
+              (term
+                (literal
+                  (nonnode_var
+                    (msg_var
+                      (ident)))))
+              (term
+                (literal
+                  (nonnode_var
+                    (msg_var
+                      (ident)))))
+              (term
+                (literal
+                  (nonnode_var
+                    (msg_var
+                      (ident))))))))))))

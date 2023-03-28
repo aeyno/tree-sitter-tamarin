@@ -39,12 +39,14 @@
 (lemma_attr) @type.builtin
 
 ;(ident) @type
-(natural) @number
-(hexcolor) @number
+(natural) @constant.numeric.integer
+(arity) @constant.numeric.integer
 [(comment) (multiline_comment)] @comment
 (formal_comment (ident) @type) @comment
 
 (simple_rule (ident) @type)
+(rule_attr ["color=" "colour="]@type.builtin (hexcolor) @constant.numeric.integer)
+
 
 (lemma (ident) @type)
 (restriction (ident) @type)
