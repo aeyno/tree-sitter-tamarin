@@ -1,0 +1,199 @@
+================================================================================
+Simple tactic
+================================================================================
+
+
+theory SimpleTactic
+begin
+
+tactic: superTactic
+presort: C
+prio: 
+	regex "~~>"
+prio:
+  regex "AgSt"
+deprio:
+  regex "*aaa"
+
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (tactic
+        (ident)
+        (presort
+          (standard_goal_ranking))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (deprio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))))))
+
+================================================================================
+More complex tactic
+================================================================================
+
+
+theory ComplexTactic
+begin
+
+tactic: superTactic
+presort: C
+prio:
+	regex "~~>"
+prio:
+  regex "AgSt"
+deprio:
+  regex "*aaa!!ùùùµ%%%$$$$$''çççàà^^^"
+
+tactic: anotherTacticcc
+presort: C
+prio:  
+  regex "!KU\( ~skS"
+prio:
+  regex "In_S"
+prio:
+  regex "In_A"
+prio:
+  regex "!KU\( ~r1"
+prio:
+  regex "!KU\( ~rb1"
+prio:
+  regex "!KU\( ~skS"
+prio:
+  regex "!KU\( h\("
+prio:
+  regex "~~>"
+prio:
+  regex "AgSt"
+prio:
+  regex "In_S"
+prio:
+  regex "In_A"
+prio:
+  regex "cp\("
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (tactic
+        (ident)
+        (presort
+          (standard_goal_ranking))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (deprio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param))))))
+      (tactic
+        (ident)
+        (presort
+          (standard_goal_ranking))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))
+        (prio
+          (function
+            (and_function
+              (not_function
+                (function_name)
+                (param)))))))))
