@@ -4,7 +4,7 @@
 
 Tree-sitter grammar for the [Tamarin](tamarin-prover.github.io/) prover theory files syntax highlighting.
 
-Tree-sitter grammar are compatible with several editors including [Neovim](https://neovim.io/), [Helix](https://helix-editor.com/) and in a [near future](https://lists.gnu.org/archive/html/emacs-devel/2022-11/msg01443.html) [Emacs](https://www.gnu.org/software/emacs/).
+Tree-sitter grammar are compatible with several editors including [Neovim](https://neovim.io/), [Helix](https://helix-editor.com/) and [Emacs](https://www.gnu.org/software/emacs/).
 
 ## 💻 Installation
 
@@ -30,6 +30,7 @@ Installing a tree-sitter grammar in Emacs is described in the Emacs tree-sitter 
 Feel free to open a pull request with your improvements.
 
 The versionning of this repo will follow the Tamarin versioning, eg. version 1.6.1 of this grammar correspond to the Tamarin prover's grammar in version 1.6.1.
+
 The *develop* branch of this repo will try to follow the [*develop* branch of Tamarin](https://github.com/tamarin-prover/tamarin-prover/tree/develop) as closely as possible but there may be some delay between the implementation in Tamarin and this grammar.
 
 ## 📃 License
