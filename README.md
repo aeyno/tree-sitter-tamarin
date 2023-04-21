@@ -20,11 +20,17 @@ Installing a tree-sitter grammar in Neovim is described in the official document
 Installing a tree-sitter grammar in Helix is described in the official documentation:
 [https://docs.helix-editor.com/languages.html#tree-sitter-grammar-configuration](https://docs.helix-editor.com/languages.html#tree-sitter-grammar-configuration)
 
+### Emacs
+
+Installing a tree-sitter grammar in Emacs is described in the Emacs tree-sitter documentation:
+[https://emacs-tree-sitter.github.io/](https://emacs-tree-sitter.github.io/)
+
 ## 🔨 Contributing
 
-Feel free to open a pull request with your improvements
+Feel free to open a pull request with your improvements.
 
 The versionning of this repo will follow the Tamarin versioning, eg. version 1.6.1 of this grammar correspond to the Tamarin prover's grammar in version 1.6.1.
+The *develop* branch of this repo will try to follow the [*develop* branch of Tamarin](https://github.com/tamarin-prover/tamarin-prover/tree/develop) as closely as possible but there may be some delay between the implementation in Tamarin and this grammar.
 
 ## 📃 License
 
