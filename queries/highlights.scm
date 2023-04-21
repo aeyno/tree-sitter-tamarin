@@ -29,8 +29,10 @@
   (post_ranking)
 ] @constant
 
-(not_function "not" @operator)
+(not_function "not" @function.builtin)
 
+
+(builtin_facts) @function.builtin
 ;"In" @type.builtin
 ;"Out" @type.builtin
 ;"Fr" @type.builtin
@@ -47,15 +49,19 @@
 (simple_rule (ident) @type)
 (rule_attr ["color=" "colour="]@type.builtin (hexcolor) @constant.numeric.integer)
 
+(tuple_term ["<" ">"] @punctuation.bracket)
 
 (lemma (ident) @type)
 (restriction (ident) @type)
 
 (quantifier) @operator
-[ "*" "+" "-" "=" "~" "!" "==>" "<=>" "#" "@" "&"] @operator
+[ "*" "+" "-" "=" "~" "!" "==>" "<=>" "#" "@" "&" "$" ] @operator
+[ "," ] @punctuation.delimiter
 (literal [ "'" (ident)] @string) 
 
 (function_sym (ident)@function.builtin (arity) @number)
 
-(app (ident) @function.builtin)
-(fact (ident) @function)
+(app (ident) @function)
+(app ["(" ")"] @punctuation.bracket)
+(fact ["(" ")"] @punctuation.bracket)
+(fact (ident) @type)

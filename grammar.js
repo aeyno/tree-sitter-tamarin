@@ -722,9 +722,19 @@ module.exports = grammar({
       )
     ),
 
+    builtin_facts: $ => choice(
+      'In',
+      'Out',
+      'Fr'
+    ),
+
+
     fact: $ => seq(
       optional('!'),
-      $.ident,
+      choice(
+        $.builtin_facts,
+        $.ident
+      ),
       '(',
       optional(
         seq(

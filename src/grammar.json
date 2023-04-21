@@ -2286,6 +2286,23 @@
         }
       ]
     },
+    "builtin_facts": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "In"
+        },
+        {
+          "type": "STRING",
+          "value": "Out"
+        },
+        {
+          "type": "STRING",
+          "value": "Fr"
+        }
+      ]
+    },
     "fact": {
       "type": "SEQ",
       "members": [
@@ -2302,8 +2319,17 @@
           ]
         },
         {
-          "type": "SYMBOL",
-          "name": "ident"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "builtin_facts"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "ident"
+            }
+          ]
         },
         {
           "type": "STRING",

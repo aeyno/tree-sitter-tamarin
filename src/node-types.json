@@ -141,6 +141,11 @@
     }
   },
   {
+    "type": "builtin_facts",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "conjunction",
     "named": true,
     "fields": {},
@@ -227,6 +232,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "builtin_facts",
+          "named": true
+        },
         {
           "type": "fact_annotes",
           "named": true
@@ -1145,11 +1154,23 @@
     "named": false
   },
   {
+    "type": "Fr",
+    "named": false
+  },
+  {
     "type": "I",
     "named": false
   },
   {
+    "type": "In",
+    "named": false
+  },
+  {
     "type": "O",
+    "named": false
+  },
+  {
+    "type": "Out",
     "named": false
   },
   {
