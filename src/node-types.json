@@ -555,6 +555,10 @@
           "named": true
         },
         {
+          "type": "natural",
+          "named": true
+        },
+        {
           "type": "nonnode_var",
           "named": true
         }
@@ -1050,6 +1054,14 @@
     "named": false
   },
   {
+    "type": "%",
+    "named": false
+  },
+  {
+    "type": "%+",
+    "named": false
+  },
+  {
     "type": "&",
     "named": false
   },
@@ -1075,6 +1087,10 @@
   },
   {
     "type": "+",
+    "named": false
+  },
+  {
+    "type": "++",
     "named": false
   },
   {
@@ -1107,6 +1123,10 @@
   },
   {
     "type": "<",
+    "named": false
+  },
+  {
+    "type": "<<",
     "named": false
   },
   {
@@ -1378,6 +1398,14 @@
     "named": false
   },
   {
+    "type": "nat",
+    "named": false
+  },
+  {
+    "type": "natural-numbers",
+    "named": false
+  },
+  {
     "type": "next",
     "named": false
   },
@@ -1603,6 +1631,10 @@
   },
   {
     "type": "∨",
+    "named": false
+  },
+  {
+    "type": "⊏",
     "named": false
   },
   {

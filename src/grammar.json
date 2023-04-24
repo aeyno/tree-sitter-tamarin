@@ -282,6 +282,10 @@
         {
           "type": "STRING",
           "value": "revealing-signing"
+        },
+        {
+          "type": "STRING",
+          "value": "natural-numbers"
         }
       ]
     },
@@ -1090,6 +1094,18 @@
         "type": "SEQ",
         "members": [
           {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "%"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
             "type": "SYMBOL",
             "name": "ident"
           },
@@ -1862,6 +1878,40 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "_natterm"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "+"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "++"
+                  }
+                ]
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_natterm"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "_natterm": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
           "name": "_xorterm"
         },
         {
@@ -1871,7 +1921,7 @@
             "members": [
               {
                 "type": "STRING",
-                "value": "+"
+                "value": "%+"
               },
               {
                 "type": "SYMBOL",
@@ -2083,6 +2133,19 @@
           ]
         },
         {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "%"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "natural"
+            }
+          ]
+        },
+        {
           "type": "SYMBOL",
           "name": "nonnode_var"
         }
@@ -2251,6 +2314,86 @@
               {
                 "type": "STRING",
                 "value": "fresh"
+              }
+            ]
+          },
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "%"
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "SYMBOL",
+                "name": "ident"
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": "."
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "natural"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "ident"
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": "."
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "natural"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "STRING",
+                "value": ":"
+              },
+              {
+                "type": "STRING",
+                "value": "nat"
               }
             ]
           },
@@ -2741,6 +2884,32 @@
             {
               "type": "STRING",
               "value": "="
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_msetterm"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_msetterm"
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "<<"
+                },
+                {
+                  "type": "STRING",
+                  "value": "⊏"
+                }
+              ]
             },
             {
               "type": "SYMBOL",
