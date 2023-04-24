@@ -33,14 +33,10 @@
 
 
 (builtin_facts) @function.builtin
-;"In" @type.builtin
-;"Out" @type.builtin
-;"Fr" @type.builtin
 
 (built_in) @type.builtin
 (lemma_attr) @type.builtin
 
-;(ident) @type
 (natural) @constant.numeric.integer
 (arity) @constant.numeric.integer
 [(comment) (multiline_comment)] @comment
