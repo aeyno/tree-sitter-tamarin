@@ -719,7 +719,8 @@ module.exports = grammar({
           ',',
           $.fact
         )
-      )
+      ),
+      optional(',')
     ),
 
     builtin_facts: $ => choice(
