@@ -10,6 +10,17 @@ const BUILT_INS = [
   'revealing-signing'
 ]
 
+const STANDARD_GOAL_RANKING = [
+  'C',
+  'I',
+  'P',
+  'S',
+  'c',
+  'i',
+  'p',
+  's'
+]
+
 module.exports = grammar({
   name: 'tamarin',
 
@@ -126,14 +137,7 @@ module.exports = grammar({
 
 
     standard_goal_ranking: $ => choice(
-      'C',
-      'I',
-      'P',
-      'S',
-      'c',
-      'i',
-      'p',
-      's'
+      ...STANDARD_GOAL_RANKING
     ),
 
     oracle_goal_ranking: $ => choice(
