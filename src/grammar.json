@@ -1386,7 +1386,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "all-trace"
+          "value": "all-traces"
         },
         {
           "type": "STRING",

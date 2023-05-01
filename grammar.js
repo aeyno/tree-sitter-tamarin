@@ -427,7 +427,7 @@ module.exports = grammar({
     ),
 
     trace_quantifier: $ => choice(
-      'all-trace',
+      'all-traces',
       'exists-trace'
     ),
 
