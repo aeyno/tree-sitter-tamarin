@@ -616,6 +616,7 @@ module.exports = grammar({
 
     term: $ => choice(
       $.tuple_term,
+      $.binary_app,
       $.app,
       $.nested,
       $.literal
@@ -623,13 +624,19 @@ module.exports = grammar({
 
     //nullary_fun: $ => '<all-nullary-functions-defined-up-to-here>',
 
-    /*binary_app: $ => seq(
-      $.binary_fun,
+    binary_app: $ => seq(
+      $.ident,
       '{',
-      $.tuple_term,
+      $._msetterm,
+      repeat(
+        seq(
+          ',',
+          $._msetterm,
+        )
+      ),
       '}',
       $.term
-    ),*/
+    ),
 
     //binary_fun: $ => '<all-binary-functions-defined-up-to-here>',
     //nullary_fun: $ => $._fun,

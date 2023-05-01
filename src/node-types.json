@@ -74,6 +74,25 @@
     }
   },
   {
+    "type": "binary_app",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "body",
     "named": true,
     "fields": {},
@@ -981,6 +1000,10 @@
       "types": [
         {
           "type": "app",
+          "named": true
+        },
+        {
+          "type": "binary_app",
           "named": true
         },
         {
