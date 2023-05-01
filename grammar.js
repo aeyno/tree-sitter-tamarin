@@ -361,7 +361,7 @@ module.exports = grammar({
       ),
       optional(
         seq(
-          '.',
+          ':',
           'msg'
         )
       )
@@ -650,13 +650,16 @@ module.exports = grammar({
     app: $ => prec.left(2, seq(
       $.ident,
       '(',
-      $._msetterm,
-      repeat(
+      optional(
         seq(
-          ',',
-          $._msetterm
-        )
-      ),
+          $._msetterm,
+          repeat(
+            seq(
+              ',',
+              $._msetterm
+            )
+          )
+        )),
       ')'
     )),
 
