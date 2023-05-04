@@ -512,7 +512,7 @@ module.exports = grammar({
         optional('#'),
         $.ident,
         optional(
-            /\.\d+/
+          /\.\d+/
         )
       ),
       seq(
@@ -885,7 +885,7 @@ module.exports = grammar({
       '∀'
     ),
 
-    hexcolor: $ => /#[0-9a-f]{6}/,
+    hexcolor: $ => /#[0-9a-fA-F]{6}/,
 
 
     comment: $ => token(

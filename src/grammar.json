@@ -2831,7 +2831,7 @@
     },
     "hexcolor": {
       "type": "PATTERN",
-      "value": "#[0-9a-f]{6}"
+      "value": "#[0-9a-fA-F]{6}"
     },
     "comment": {
       "type": "TOKEN",
