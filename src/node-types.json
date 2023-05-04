@@ -668,15 +668,11 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
           "type": "ident",
-          "named": true
-        },
-        {
-          "type": "natural",
           "named": true
         }
       ]
@@ -687,7 +683,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -696,10 +692,6 @@
         },
         {
           "type": "msg_var",
-          "named": true
-        },
-        {
-          "type": "natural",
           "named": true
         }
       ]

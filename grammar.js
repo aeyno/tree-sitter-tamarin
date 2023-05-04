@@ -512,19 +512,13 @@ module.exports = grammar({
         optional('#'),
         $.ident,
         optional(
-          seq(
-            '.',
-            $.natural
-          )
+            /\.\d+/
         )
       ),
       seq(
         $.ident,
         optional(
-          seq(
-            '.',
-            $.natural
-          )
+          /\.\d+/
         ),
         ':',
         'node'
@@ -685,19 +679,13 @@ module.exports = grammar({
         optional('$'),
         $.ident,
         optional(
-          seq(
-            '.',
-            $.natural
-          )
+          /\.\d+/
         )
       ),
       seq(
         $.ident,
         optional(
-          seq(
-            '.',
-            $.natural
-          )
+          /\.\d+/
         ),
         ':',
         'pub'
@@ -706,19 +694,13 @@ module.exports = grammar({
         optional('~'),
         $.ident,
         optional(
-          seq(
-            '.',
-            $.natural
-          )
+          /\.\d+/
         )
       ),
       seq(
         $.ident,
         optional(
-          seq(
-            '.',
-            $.natural
-          )
+          /\.\d+/
         ),
         ':',
         'fresh'
