@@ -885,7 +885,14 @@ module.exports = grammar({
       '∀'
     ),
 
-    hexcolor: $ => /#[0-9a-fA-F]{6}/,
+    hexcolor: $ => choice(
+      /#?[0-9a-fA-F]{6}/,
+      seq(
+        '\'',
+        /#?[0-9a-fA-F]{6}/,
+        '\''
+      )
+    ),
 
 
     comment: $ => token(

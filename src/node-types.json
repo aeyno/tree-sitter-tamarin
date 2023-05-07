@@ -455,6 +455,11 @@
     }
   },
   {
+    "type": "hexcolor",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "imp",
     "named": true,
     "fields": {},
@@ -1323,10 +1328,6 @@
   {
     "type": "heuristic=",
     "named": false
-  },
-  {
-    "type": "hexcolor",
-    "named": true
   },
   {
     "type": "hide_lemma=",
