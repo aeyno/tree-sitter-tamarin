@@ -61,3 +61,5 @@
 (app ["(" ")"] @punctuation.bracket)
 (fact ["(" ")"] @punctuation.bracket)
 (fact (ident) @type)
+
+(preprocessor_block [ "#ifdef" "#endif" ] @keyword (ident) @type)

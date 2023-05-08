@@ -43,8 +43,26 @@ module.exports = grammar({
 
     ident: $ => /[a-zA-Z0-9]\w*?/,
 
+    preprocessor_block: $ => seq(
+      '#ifdef',
+      $.ident,
+      repeat(
+        choice(
+          $._signature_spec,
+          $.global_heuristic,
+          $.rule,
+          $.restriction,
+          $.lemma,
+          $.formal_comment,
+          $.tactic
+        )
+      ),
+      '#endif'
+    ),
+
     body: $ => repeat1(
       choice(
+        $.preprocessor_block,
         $._signature_spec,
         $.global_heuristic,
         $.rule,

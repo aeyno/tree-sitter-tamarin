@@ -42,11 +42,68 @@
       "type": "PATTERN",
       "value": "[a-zA-Z0-9]\\w*?"
     },
+    "preprocessor_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "#ifdef"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "ident"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_signature_spec"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "global_heuristic"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "rule"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "restriction"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lemma"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "formal_comment"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "tactic"
+              }
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "#endif"
+        }
+      ]
+    },
     "body": {
       "type": "REPEAT1",
       "content": {
         "type": "CHOICE",
         "members": [
+          {
+            "type": "SYMBOL",
+            "name": "preprocessor_block"
+          },
           {
             "type": "SYMBOL",
             "name": "_signature_spec"

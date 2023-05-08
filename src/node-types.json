@@ -125,6 +125,10 @@
           "named": true
         },
         {
+          "type": "preprocessor_block",
+          "named": true
+        },
+        {
           "type": "restriction",
           "named": true
         },
@@ -737,6 +741,57 @@
     "fields": {}
   },
   {
+    "type": "preprocessor_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "built_ins",
+          "named": true
+        },
+        {
+          "type": "equations",
+          "named": true
+        },
+        {
+          "type": "formal_comment",
+          "named": true
+        },
+        {
+          "type": "functions",
+          "named": true
+        },
+        {
+          "type": "global_heuristic",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "lemma",
+          "named": true
+        },
+        {
+          "type": "restriction",
+          "named": true
+        },
+        {
+          "type": "rule",
+          "named": true
+        },
+        {
+          "type": "tactic",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "presort",
     "named": true,
     "fields": {},
@@ -1063,6 +1118,14 @@
   },
   {
     "type": "#",
+    "named": false
+  },
+  {
+    "type": "#endif",
+    "named": false
+  },
+  {
+    "type": "#ifdef",
     "named": false
   },
   {
