@@ -573,3 +573,231 @@ end
                         (ident))
                       (node_var
                         (ident)))))))))))))
+
+================================================================================
+Lemma with exists-trace
+================================================================================
+
+
+theory LemmaExistsTrace
+begin
+
+lemma Test: exists-trace
+"
+  All a b c #i.
+  SomeFact(a,b,c)@i ==> Ex #j. OtherFact(a,b,c)@j & #i < #j 
+"
+
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (lemma
+        (ident)
+        (trace_quantifier)
+        (formula
+          (imp
+            (disjunction
+              (conjunction
+                (negation
+                  (atom
+                    (quantifier)
+                    (lvar
+                      (nonnode_var
+                        (msg_var
+                          (ident))))
+                    (lvar
+                      (nonnode_var
+                        (msg_var
+                          (ident))))
+                    (lvar
+                      (nonnode_var
+                        (msg_var
+                          (ident))))
+                    (lvar
+                      (node_var
+                        (ident)))
+                    (formula
+                      (imp
+                        (disjunction
+                          (conjunction
+                            (negation
+                              (atom
+                                (fact
+                                  (ident)
+                                  (term
+                                    (literal
+                                      (nonnode_var
+                                        (msg_var
+                                          (ident)))))
+                                  (term
+                                    (literal
+                                      (nonnode_var
+                                        (msg_var
+                                          (ident)))))
+                                  (term
+                                    (literal
+                                      (nonnode_var
+                                        (msg_var
+                                          (ident))))))
+                                (node_var
+                                  (ident))))))))))))
+            (imp
+              (disjunction
+                (conjunction
+                  (negation
+                    (atom
+                      (quantifier)
+                      (lvar
+                        (node_var
+                          (ident)))
+                      (formula
+                        (imp
+                          (disjunction
+                            (conjunction
+                              (negation
+                                (atom
+                                  (fact
+                                    (ident)
+                                    (term
+                                      (literal
+                                        (nonnode_var
+                                          (msg_var
+                                            (ident)))))
+                                    (term
+                                      (literal
+                                        (nonnode_var
+                                          (msg_var
+                                            (ident)))))
+                                    (term
+                                      (literal
+                                        (nonnode_var
+                                          (msg_var
+                                            (ident))))))
+                                  (node_var
+                                    (ident))))))))))
+                  (negation
+                    (atom
+                      (node_var
+                        (ident))
+                      (node_var
+                        (ident)))))))))))))
+
+================================================================================
+Lemma with all-traces
+================================================================================
+
+
+theory LemmaAllTraces
+begin
+
+lemma Test: all-traces
+"
+  All a b c #i.
+  SomeFact(a,b,c)@i ==> Ex #j. OtherFact(a,b,c)@j & #i < #j 
+"
+
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (lemma
+        (ident)
+        (trace_quantifier)
+        (formula
+          (imp
+            (disjunction
+              (conjunction
+                (negation
+                  (atom
+                    (quantifier)
+                    (lvar
+                      (nonnode_var
+                        (msg_var
+                          (ident))))
+                    (lvar
+                      (nonnode_var
+                        (msg_var
+                          (ident))))
+                    (lvar
+                      (nonnode_var
+                        (msg_var
+                          (ident))))
+                    (lvar
+                      (node_var
+                        (ident)))
+                    (formula
+                      (imp
+                        (disjunction
+                          (conjunction
+                            (negation
+                              (atom
+                                (fact
+                                  (ident)
+                                  (term
+                                    (literal
+                                      (nonnode_var
+                                        (msg_var
+                                          (ident)))))
+                                  (term
+                                    (literal
+                                      (nonnode_var
+                                        (msg_var
+                                          (ident)))))
+                                  (term
+                                    (literal
+                                      (nonnode_var
+                                        (msg_var
+                                          (ident))))))
+                                (node_var
+                                  (ident))))))))))))
+            (imp
+              (disjunction
+                (conjunction
+                  (negation
+                    (atom
+                      (quantifier)
+                      (lvar
+                        (node_var
+                          (ident)))
+                      (formula
+                        (imp
+                          (disjunction
+                            (conjunction
+                              (negation
+                                (atom
+                                  (fact
+                                    (ident)
+                                    (term
+                                      (literal
+                                        (nonnode_var
+                                          (msg_var
+                                            (ident)))))
+                                    (term
+                                      (literal
+                                        (nonnode_var
+                                          (msg_var
+                                            (ident)))))
+                                    (term
+                                      (literal
+                                        (nonnode_var
+                                          (msg_var
+                                            (ident))))))
+                                  (node_var
+                                    (ident))))))))))
+                  (negation
+                    (atom
+                      (node_var
+                        (ident))
+                      (node_var
+                        (ident)))))))))))))

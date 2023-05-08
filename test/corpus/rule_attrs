@@ -1,0 +1,349 @@
+================================================================================
+Rule with color (format: #00aaff)
+================================================================================
+
+
+theory RuleWithColor
+begin
+
+rule Test[color=#00aaff]:
+    [ Fr(~a) ] --> [ Out(~a) ]
+
+rule TestWAction[color=#00aaff]:
+    [ Fr(~a) ] --[ Fact(~a) ]-> [ Out(~a) ]
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (rule
+        (simple_rule
+          (ident)
+          (rule_attrs
+            (rule_attr
+              (hexcolor)))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))))
+      (rule
+        (simple_rule
+          (ident)
+          (rule_attrs
+            (rule_attr
+              (hexcolor)))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (ident)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident)))))))))))
+
+================================================================================
+Rule with color (format: #00AAFF)
+================================================================================
+
+
+theory RuleWithColor
+begin
+
+rule Test[color=#00AAFF]:
+    [ Fr(~a) ] --> [ Out(~a) ]
+
+rule TestWAction[color=#00AAFF]:
+    [ Fr(~a) ] --[ Fact(~a) ]-> [ Out(~a) ]
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (rule
+        (simple_rule
+          (ident)
+          (rule_attrs
+            (rule_attr
+              (hexcolor)))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))))
+      (rule
+        (simple_rule
+          (ident)
+          (rule_attrs
+            (rule_attr
+              (hexcolor)))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (ident)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident)))))))))))
+
+================================================================================
+Rule with color (format: 00aaff)
+================================================================================
+
+
+theory RuleWithColor
+begin
+
+rule Test[color=00aaff]:
+    [ Fr(~a) ] --> [ Out(~a) ]
+
+rule TestWAction[color=00aaff]:
+    [ Fr(~a) ] --[ Fact(~a) ]-> [ Out(~a) ]
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (rule
+        (simple_rule
+          (ident)
+          (rule_attrs
+            (rule_attr
+              (hexcolor)))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))))
+      (rule
+        (simple_rule
+          (ident)
+          (rule_attrs
+            (rule_attr
+              (hexcolor)))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (ident)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident)))))))))))
+
+================================================================================
+Rule with color (format: 00AAFF)
+================================================================================
+
+
+theory RuleWithColor
+begin
+
+rule Test[color=00AAFF]:
+    [ Fr(~a) ] --> [ Out(~a) ]
+
+rule TestWAction[color=00AAFF]:
+    [ Fr(~a) ] --[ Fact(~a) ]-> [ Out(~a) ]
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (rule
+        (simple_rule
+          (ident)
+          (rule_attrs
+            (rule_attr
+              (hexcolor)))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))))
+      (rule
+        (simple_rule
+          (ident)
+          (rule_attrs
+            (rule_attr
+              (hexcolor)))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (ident)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident)))))))))))
+
+================================================================================
+Rule with color (using keyword colour)
+================================================================================
+
+
+theory RuleWithColor
+begin
+
+rule Test[colour=#00aaff]:
+    [ Fr(~a) ] --> [ Out(~a) ]
+
+rule TestWAction[colour=#00aaff]:
+    [ Fr(~a) ] --[ Fact(~a) ]-> [ Out(~a) ]
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (rule
+        (simple_rule
+          (ident)
+          (rule_attrs
+            (rule_attr
+              (hexcolor)))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))))
+      (rule
+        (simple_rule
+          (ident)
+          (rule_attrs
+            (rule_attr
+              (hexcolor)))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (ident)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident)))))))))))

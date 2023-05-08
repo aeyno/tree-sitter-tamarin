@@ -1,0 +1,245 @@
+================================================================================
+Rule with a function in a fact
+================================================================================
+
+
+theory FunctionInFact
+begin
+
+rule Test:
+	[ Fr(~a) ] --[ Action(func(~a)) ]-> []
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (rule
+        (simple_rule
+          (ident)
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (ident)
+              (term
+                (app
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (ident)))))))))))))
+
+================================================================================
+Rule with multiple functions in a fact
+================================================================================
+
+
+theory FunctionInFact
+begin
+
+rule Test:
+	[ Fr(~a) ] --[ Action(func(~a), other_func(~a)) ]-> []
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (rule
+        (simple_rule
+          (ident)
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (ident)
+              (term
+                (app
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (ident))))))
+              (term
+                (app
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (ident)))))))))))))
+
+================================================================================
+Function with multiple parameters
+================================================================================
+
+
+theory FunctionInFact
+begin
+
+rule Test:
+	[ Fr(~a), Fr(~b) ] --[ Action(func(~a, ~b)) ]-> []
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (rule
+        (simple_rule
+          (ident)
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident)))))
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (ident)
+              (term
+                (app
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (ident))))
+                  (term
+                    (literal
+                      (nonnode_var
+                        (ident)))))))))))))
+
+================================================================================
+Function with no parameters
+================================================================================
+
+
+theory FunctionInFact
+begin
+
+rule Test:
+	[ Fr(~a) ] --[ Action(func()) ]-> []
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (rule
+        (simple_rule
+          (ident)
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (ident)
+              (term
+                (app
+                  (ident))))))))))
+
+================================================================================
+Nested functions
+================================================================================
+
+
+theory FunctionInFact
+begin
+
+rule Test:
+	[ Fr(~a) ] --[ Action(func(nested(~a))) ]-> []
+
+rule Test2:
+	[ Fr(~a) ] --[ Action(func(nested(~a), ~a)) ]-> []
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (rule
+        (simple_rule
+          (ident)
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (ident)
+              (term
+                (app
+                  (ident)
+                  (term
+                    (app
+                      (ident)
+                      (term
+                        (literal
+                          (nonnode_var
+                            (ident))))))))))))
+      (rule
+        (simple_rule
+          (ident)
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (literal
+                  (nonnode_var
+                    (ident))))))
+          (facts
+            (fact
+              (ident)
+              (term
+                (app
+                  (ident)
+                  (term
+                    (app
+                      (ident)
+                      (term
+                        (literal
+                          (nonnode_var
+                            (ident))))))
+                  (term
+                    (literal
+                      (nonnode_var
+                        (ident)))))))))))))
