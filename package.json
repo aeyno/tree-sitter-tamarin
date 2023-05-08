@@ -1,18 +1,18 @@
 {
   "name": "tree-sitter-tamarin",
-  "version": "1.0.0",
+  "version": "1.6.1",
   "description": "DH-proto-proof Security Protocol Theory Files",
   "main": "bindings/node",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Tom Gouville (tom.gouville@protonmail.com)",
   "license": "ISC",
   "dependencies": {
     "nan": "^2.17.0"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.20.0"
+    "tree-sitter-cli": "^0.20.8"
   },
   "scripts": {
     "test": "tree-sitter test"
