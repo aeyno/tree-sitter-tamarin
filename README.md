@@ -30,6 +30,7 @@ Installing a tree-sitter grammar in Emacs is described in the Emacs tree-sitter 
 Feel free to open a pull request with your improvements.
 
 The versionning of this repo will follow the Tamarin versioning, eg. version 1.6.1 of this grammar correspond to the Tamarin prover's grammar in version 1.6.1.
+The version number could be followed with a revision version if some fixes are applied to the grammar before the next version of Tamarin (`<version number>-<revision number>`, eg. `1.6.1-1`).
 
 The *develop* branch of this repo will try to follow the [*develop* branch of Tamarin](https://github.com/tamarin-prover/tamarin-prover/tree/develop) as closely as possible but there may be some delay between the implementation in Tamarin and this grammar.
 
