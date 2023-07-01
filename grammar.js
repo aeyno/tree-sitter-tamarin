@@ -7,7 +7,13 @@ const BUILT_INS = [
   'bilinear-pairing',
   'xor',
   'multiset',
-  'revealing-signing'
+  'revealing-signing',
+  'locations-report',
+  'reliable-channel',
+  'dest-signing',
+  'dest-pairing',
+  'dest-symmetric-encryption',
+  'dest-asymmetric-encryption'
 ]
 
 const STANDARD_GOAL_RANKING = [
