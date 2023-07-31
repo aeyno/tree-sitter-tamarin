@@ -7,7 +7,8 @@ const BUILT_INS = [
   'bilinear-pairing',
   'xor',
   'multiset',
-  'revealing-signing'
+  'revealing-signing',
+  'natural-numbers'
 ]
 
 const STANDARD_GOAL_RANKING = [
@@ -101,7 +102,6 @@ module.exports = grammar({
     ),
 
     arity: $ => /\d+?/,
-
 
     equations: $ => seq(
       'equations',
@@ -370,6 +370,7 @@ module.exports = grammar({
     ),
 
     msg_var: $ => prec.left(4, seq(
+      optional('%'),
       $.ident,
       optional(
         seq(
@@ -583,10 +584,23 @@ module.exports = grammar({
     ),
 
     _msetterm: $ => seq(
+      $._natterm,
+      repeat(
+        seq(
+          choice(
+            '+',
+            '++'
+          ),
+          $._natterm
+        )
+      )
+    ),
+
+    _natterm: $ => seq(
       $._xorterm,
       repeat(
         seq(
-          '+',
+          '%+',
           $._xorterm
         )
       )
@@ -689,6 +703,10 @@ module.exports = grammar({
         $.ident,
         '\''
       ),
+      seq(
+        '%',
+        $.natural
+      ),
       $.nonnode_var
     ),
 
@@ -722,6 +740,27 @@ module.exports = grammar({
         ),
         ':',
         'fresh'
+      ),
+      seq(
+        optional('%'),
+        $.ident,
+        optional(
+          seq(
+            '.',
+            $.natural
+          )
+        )
+      ),
+      seq(
+        $.ident,
+        optional(
+          seq(
+            '.',
+            $.natural
+          )
+        ),
+        ':',
+        'nat'
       ),
       $.msg_var
     )),
@@ -876,6 +915,14 @@ module.exports = grammar({
       seq(
         $._msetterm,
         '=',
+        $._msetterm
+      ),
+      seq(
+        $._msetterm,
+        choice(
+          '<<',
+          '⊏'
+        ),
         $._msetterm
       ),
       seq(

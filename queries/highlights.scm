@@ -65,7 +65,7 @@
   (ident) @type)
 
 (quantifier) @operator
-[ "*" "+" "-" "=" "~" "!" "==>" "<=>" "#" "@" "&" "$" ] @operator
+[ "++" "%+" "*" "+" "-" "=" "~" "!" "==>" "<=>" "#" "@" "&" "$" "%" ] @operator
 [ "," ] @punctuation.delimiter
 (negation [ "not" "¬"] @function.builtin)
 (literal [ "'" (ident)] @string)
