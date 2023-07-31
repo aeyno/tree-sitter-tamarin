@@ -8,6 +8,10 @@
 
 (built_ins "builtins" @keyword)
 
+(macros "macros" @keyword)
+
+(macro (fun_sym) @function.builtin)
+
 (global_heuristic "heuristic" @keyword)
 
 (tactic 

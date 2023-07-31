@@ -3,7 +3,7 @@ Simple rule
 ==================
 
 
-theory ComplexEquationDeclaration
+theory SimpleRule
 begin
 
 rule MyRule:

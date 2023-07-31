@@ -1,0 +1,90 @@
+================================================================================
+Simple rule
+================================================================================
+
+
+theory SimpleMacro
+begin
+
+macros: macro1(x) = h(x), macro2(x, y) = <x, y>, macro3() = $A
+
+rule MyRule:
+	[In(macro2(x,y)), X(macro3())] --> [A(macro1(x))]
+
+end
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (security_protocol_theory
+    (ident)
+    (body
+      (macros
+        (macro
+          (ident)
+          (ident)
+          (term
+            (app
+              (ident)
+              (term
+                (literal
+                  (nonnode_var
+                    (msg_var
+                      (ident))))))))
+        (macro
+          (ident)
+          (ident)
+          (ident)
+          (term
+            (tuple_term
+              (term
+                (literal
+                  (nonnode_var
+                    (msg_var
+                      (ident)))))
+              (term
+                (literal
+                  (nonnode_var
+                    (msg_var
+                      (ident))))))))
+        (macro
+          (ident)
+          (term
+            (literal
+              (nonnode_var
+                (ident))))))
+      (rule
+        (simple_rule
+          (ident)
+          (facts
+            (fact
+              (builtin_facts)
+              (term
+                (app
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident)))))
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident))))))))
+            (fact
+              (ident)
+              (term
+                (app
+                  (ident)))))
+          (facts
+            (fact
+              (ident)
+              (term
+                (app
+                  (ident)
+                  (term
+                    (literal
+                      (nonnode_var
+                        (msg_var
+                          (ident))))))))))))))

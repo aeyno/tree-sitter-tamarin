@@ -84,7 +84,8 @@ module.exports = grammar({
     _signature_spec: $ => choice(
       $.functions,
       $.equations,
-      $.built_ins
+      $.built_ins,
+      $.macros
     ),
 
     functions: $ => seq(
@@ -128,7 +129,40 @@ module.exports = grammar({
       $.term
     ),
 
+    macros: $ => seq(
+      'macros',
+      ':',
+      $.macro,
+      repeat(
+        seq(
+          ',',
+          $.macro
+        )
+      ),
+    ),
 
+    macro: $ => seq(
+      $.fun_sym,
+      '(',
+      optional(
+        seq(
+          $.ident,
+          repeat(
+            seq(
+              ',',
+              $.ident
+            )
+          ),  
+        )
+      ),
+      ')',
+      '=',
+      $.term
+    ),
+
+    fun_sym: $ => $.ident,
+
+   
     built_ins: $ => seq(
       'builtins',
       ':',
