@@ -1377,6 +1377,22 @@
     "named": false
   },
   {
+    "type": "dest-asymmetric-encryption",
+    "named": false
+  },
+  {
+    "type": "dest-pairing",
+    "named": false
+  },
+  {
+    "type": "dest-signing",
+    "named": false
+  },
+  {
+    "type": "dest-symmetric-encryption",
+    "named": false
+  },
+  {
     "type": "dhreNoise",
     "named": false
   },
@@ -1465,6 +1481,10 @@
     "named": false
   },
   {
+    "type": "locations-report",
+    "named": false
+  },
+  {
     "type": "modulo",
     "named": false
   },
@@ -1538,6 +1558,10 @@
   },
   {
     "type": "regex",
+    "named": false
+  },
+  {
+    "type": "reliable-channel",
     "named": false
   },
   {

@@ -8,7 +8,13 @@ const BUILT_INS = [
   'xor',
   'multiset',
   'revealing-signing',
-  'natural-numbers'
+  'natural-numbers',
+  'locations-report',
+  'reliable-channel',
+  'dest-signing',
+  'dest-pairing',
+  'dest-symmetric-encryption',
+  'dest-asymmetric-encryption'
 ]
 
 const STANDARD_GOAL_RANKING = [

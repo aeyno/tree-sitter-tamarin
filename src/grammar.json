@@ -343,6 +343,30 @@
         {
           "type": "STRING",
           "value": "natural-numbers"
+        },
+        {
+          "type": "STRING",
+          "value": "locations-report"
+        },
+        {
+          "type": "STRING",
+          "value": "reliable-channel"
+        },
+        {
+          "type": "STRING",
+          "value": "dest-signing"
+        },
+        {
+          "type": "STRING",
+          "value": "dest-pairing"
+        },
+        {
+          "type": "STRING",
+          "value": "dest-symmetric-encryption"
+        },
+        {
+          "type": "STRING",
+          "value": "dest-asymmetric-encryption"
         }
       ]
     },
