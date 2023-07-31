@@ -1,5 +1,5 @@
 ================================================================================
-Simple rule
+Simple macro
 ================================================================================
 
 
@@ -21,7 +21,8 @@ end
     (body
       (macros
         (macro
-          (ident)
+          (fun_sym
+            (ident))
           (ident)
           (term
             (app
@@ -32,7 +33,8 @@ end
                     (msg_var
                       (ident))))))))
         (macro
-          (ident)
+          (fun_sym
+            (ident))
           (ident)
           (ident)
           (term
@@ -48,7 +50,8 @@ end
                     (msg_var
                       (ident))))))))
         (macro
-          (ident)
+          (fun_sym
+            (ident))
           (term
             (literal
               (nonnode_var
